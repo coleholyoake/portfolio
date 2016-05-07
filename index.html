@@ -1,16 +1,511 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>ch,</title>
+    <head>
+        <title>ch,</title>
 
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
-    <link href="css/custom.css" rel="stylesheet" type="text/css">
-</head>
-<body>
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+            html {
+                padding: -100px;
+                background: #191f2d;
 
-</body>
+            }
+            html, body {
+
+                height: 100%;
+                font-family: 'avenir', sans-serif;
+                font-size: 14px;
+
+                
+            }
+
+            .mainCont {
+                position: relative;
+    width: 100%;
+    height: 100%;
+
+            }
+
+            .mainHeader {
+
+                width: 100%;
+    height: 85%;
+                background: #191f2d;
+                background-size: cover;
+                clear: both;
+
+            }
+            .content {
+position: fixed;
+z-index: 99;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+pointer-events: none;
+
+            }
+            .control {
+    z-index: 1;
+    height: 15%;
+    width: 100%;
+    background: #191f2d;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1em;
+    /*position: fixed;*/
+    
+}
+
+.bottomCont {
+    width: 100%;
+    background: #fff;
+    height: 80%;
+}
+.bottomCont3 {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background: #191f2d;
+}
+
+.bottomCont2 {
+    width: 100%;
+    background: #fff;
+    height: 60%;
+    padding: 15% 10%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.bottomCont4 {
+    width: 100%;
+    background: #fff;
+    height: 100%;
+}
+.bottomCont5 {
+    position: relative;
+    width: 100%;
+    height: 30%;
+    background: #fff;
+}
+           
+            
+            span {
+    letter-spacing: -0.08em;
+    color: inherit;
+}
+h2 {
+    float: left;
+    text-align: left;
+    display: inline-block;
+}
+h3 {
+    font-weight: 400; 
+    margin-top: 1em;
+
+}
+i {
+    letter-spacing: .5em;
+}
+ul, li {
+    text-align: right;
+    display: inline-block;
+    margin-left: 2em;
+    font-size: 12px;
+    letter-spacing: .5em;
+}
+
+
+h1
+{
+    z-index: 99;
+  font-size: 150px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10%;
+  box-sizing:border-box;
+  
+  color: #f3f3f3;
+  letter-spacing: -0.03em;
+
+  
+  line-height: 1em;
+  
+  text-align: center;
+  
+  position: relative;
+}
+.tween-looper
+{
+  -webkit-backface-visibility: hidden;
+  
+  backface-visibility: hidden;
+  
+  -webkit-animation: looperFrames 6s linear infinite;
+  
+  animation: looperFrames 6s linear infinite;
+}
+
+@-webkit-keyframes looperFrames
+{
+  0%{-webkit-transform: translateY(0px);}
+  25%{-webkit-transform: translateY(20px);}
+  50%{-webkit-transform: translateY(0px);}
+  75%{-webkit-transform: translateY(-20px);}
+  100%{-webkit-transform: translateY(0px);}
+}
+
+@keyframes looperFrames
+{
+  0%{transform: translateY(0px);}
+  25%{transform: translateY(20px);}
+  50%{transform: translateY(0px);}
+  75%{transform: translateY(-20px);}
+  100%{transform: translateY(0px);}  
+}
+
+.content2 {
+    opacity: 0;
+    z-index: 999;
+    position: fixed;
+    /*bottom: 0;*/
+    margin: 0 auto;
+    padding: 1em 10% .5em 10%;
+    box-sizing: border-box;
+    text-align: right;
+    width: 100%;
+    background: #191f2d;
+    color: #fff;
+
+}
+.svg-wrapper {
+
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  width: 220px;  
+}
+
+.svg-wrapper2 {
+z-index: 9999;
+position: absolute;
+bottom: 0%;
+right: 10%;
+/* transform: translateY(-50%); */
+margin: 0 auto;
+width: 220px;
+
+}
+.shape {
+  stroke-dasharray: 180 500;
+  stroke-dashoffset: -300;
+  stroke-width: 3px;
+  fill: transparent;
+  stroke: #fff;
+  border-bottom: 3px solid #fff;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+.shape2 {
+  stroke-dasharray: 180 500;
+  stroke-dashoffset: -300;
+  stroke-width: 4px;
+  fill: transparent;
+  stroke: #000;
+  border-bottom: 4px solid #000;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+.text2 {
+  color: #000;
+  top: -45px;
+  position: relative;
+  margin-left: 1em;
+  font-weight: 500;
+
+}
+
+.text {
+  color: #fff;
+  top: -45px;
+  position: relative;
+  margin-left: 1em;
+
+}
+.svg-wrapper2:hover svg .shape2 {
+  stroke-width: 4px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 560;
+}
+
+.svg-wrapper:hover svg .shape {
+  stroke-width: 3px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 560;
+}
+
+li a {
+    position: relative;
+    color: #fff;
+    padding: 0 .5em .5em .5em;
+
+}
+li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 1px solid #fff;
+  transition: 0.4s;
+}
+li a:hover:after {
+  width: 100%;
+}
+a span {
+    letter-spacing: 0;
+}
+a {
+    text-decoration: none;
+}
+.bottomCont3, .bottomCont, .bottomCont2, .bottomCont4, .bottomCont5, footer {
+    display: none;
+    overflow: hidden;
+    position: relative;
+}
+.bottomCont {
+    text-align: center;
+    letter-spacing: 1em;
+}
+
+.image {
+  display: flex;
+  position: absolute;
+  top:33.33%;
+  /*margin-top: -15%;*/
+  width: 33.33%;
+  display: inline;
+}
+.image2 {
+  display: flex;
+  position: absolute;
+  top:33.33%;
+  left: 33.33%;
+  /*margin-top: -15%;*/
+  width: 33.33%;
+  display: inline;
+}
+.image3 {
+  display: flex;
+  position: absolute;
+  top:33.33%;
+  left: 66.66%;
+  /*margin-top: -15%;*/
+  width: 33.33%;
+  display: inline;
+}
+.moving-zone {
+            position: relative;
+            width:62%;
+            height: 100%;
+            background-image: url('test.jpg');
+            background-size: cover;
+            
+}
+.moving-zone2 {
+            position: relative;
+            width:62%;
+            height: 100%;
+            background-image: url('test2.jpg');
+            background-size: cover;
+            
+}
+.moving-zone3 {
+            position: relative;
+            width:62%;
+            height: 100%;
+            background-image: url('test3.jpg');
+            background-size: cover;
+            
+}
+.moving-zone h1, .moving-zone2 h1, .moving-zone3 h1 {
+    width: 100%;
+    top:33.33%;
+    left: 66.66%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: center;
+    text-align: left;
+    color: #191f2d;
+    line-height: .75em;
+}
+.furniture {
+    line-height: .60em !important;
+}
+footer {
+    height: 40%;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+  h1 {
+    font-size: 300px;
+    }
+  }
+
+        </style>
+    </head>
+    <body id="top">
+    <nav class="content2">
+    <h2>ch,</h2>
+    <ul>
+        <li><a href="">HOM<span>E</span></a></li>
+        <li><a href="">WE<span>B</span></a></li>
+        <li><a href="">GRAPHI<span>C</span></a></li>
+        <li><a href="">FURNITUR<span>E</span></a></li>
+        <li><a href="">MIS<span>C</span></a></li>
+        <li><a href="">INF<span>O</span></a></li>
+    </ul>
+    </nav>
+        <div class="mainCont">
+            <div class="mainHeader">
+            
+                <div class="content">
+                    <h1 class="shadowPlay tween-looper">c<span>h,</span></h1>
+                </div>
+                
+            </div>
+            <div class="control">
+                <a href="#scrollTo">
+                <div class="svg-wrapper">
+                    <svg height="60" width="220" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="shape" height="60" width="220" /></rect>
+                        <div class="text"><p><small>ENTER</small></p></div>
+                    </svg>
+                </div>
+                </a>
+
+            </div>
+        </div>
+        
+            <div class="bottomCont3" >
+            </div>
+
+            <div class="bottomCont2" id="scrollTo" >
+                <h3><b>COLE HOLYOAKE</b> - Designer / Developer <br><br>
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i> 
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-github" aria-hidden="true"></i>
+                <i class="fa fa-codepen" aria-hidden="true"></i>
+                <i class="fa fa-pinterest" aria-hidden="true"></i>
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                </h3>
+            </div>
+
+            <div class="bottomCont">
+                    <div class="moving-zone">
+                        <h1 class="web">web,</h1>
+                    </div>
+                    <div>
+                        <a href="">
+                            <div class="svg-wrapper2">
+                                <svg height="60" width="220" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape2" height="60" width="220" /></rect>
+                                    <div class="text2"><p><small>SEE MORE</small></p></div>
+                                </svg>
+                            </div>
+                        </a> 
+                    </div>
+            </div>
+            <div class="bottomCont5">
+            </div>
+            <div class="bottomCont">
+                    <div class="moving-zone2">
+                        <h1 class="graphic">gra<br>phic,</h1>
+                    </div>
+                    <div>
+                        <a href="blank.html">
+                            <div class="svg-wrapper2">
+                                <svg height="60" width="220" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape2" height="60" width="220" /></rect>
+                                    <div class="text2"><p><small>SEE MORE</small></p></div>
+                                </svg>
+                            </div>
+                        </a> 
+                    </div>
+            </div>
+            <div class="bottomCont5">
+            </div>
+            <div class="bottomCont">
+                    <div class="moving-zone3">
+                        <h1 class="furniture">furn<br>iture,</h1>
+                    </div>
+                    <div>
+                        <a href="">
+                            <div class="svg-wrapper2">
+                                <svg height="60" width="220" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="shape2" height="60" width="220" /></rect>
+                                    <div class="text2"><p><small>SEE MORE</small></p></div>
+                                </svg>
+                            </div>
+                        </a> 
+                    </div>
+            </div>
+            <div class="bottomCont5">
+            </div>
+            <!-- <div class="bottomCont4">
+                <img class="image" src="park.jpg"><img class="image2" src="park.jpg"><img class="image3" src="park.jpg">
+            </div> -->
+            <footer>
+                <a href="#top">top <i class="fa fa-angle-up" aria-hidden="true"></i></a>
+            </footer>
+    </body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript">
+        var scrollDown = $('.content');
+        var control = $('.control');
+        var over = $('.content2');
+            $(window).on('scroll', function() {
+                var st = $(this).scrollTop();
+                var st1 = $(this).scrollTop() - $('.mainCont').height();
+                var st2 = $(this).scrollTop() - $('.mainCont').height() - $('.bottomCont3').height();
+                var st3 = $(this).scrollTop() - $('.mainCont').height() - $('.bottomCont3').height() - $('.bottomCont3').height();
+                var st4 = $(this).scrollTop() - $('.mainCont').height() - $('.bottomCont3').height() - $('.bottomCont').height() - $('.bottomCont3').height() - $('.bottomCont3').height();
+
+                scrollDown.css({ 'opacity' : (1 - st/$('.mainHeader').height()) });
+                control.css({ 'opacity' : (1 - st/$('.control').height()) });
+                over.css({ 'opacity' : (0 + st1/300) });
+
+                $('.image').css({'transform' : 'translate(0px, ' + st3/40 + '%)'});
+                $('.image3').css({'transform' : 'translate(0px, -' + st3/40 + '%)'});
+
+                $('.web').css({'transform' : 'translate(0px, -' + st2/20 + '%)'});
+                $('.graphic').css({'transform' : 'translate(0px, -' + st3/20 + '%)'});
+                $('.furniture').css({'transform' : 'translate(0px, -' + st4/20 + '%)'});
+            });
+
+        $('a').click(function(){
+            $('.bottomCont3, .bottomCont, .bottomCont2, .bottomCont4, .bottomCont5, footer').show();
+        });
+
+        $('a').click(function(){
+            $('html, body').delay(500).animate({
+                scrollTop: $( $(this).attr('href') ).offset().top}, 1200);
+            return false;
+        });
+
+
+
+        </script>
+
 </html>
